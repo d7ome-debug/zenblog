@@ -14,9 +14,8 @@ def category(request):
 def search(request):
     return render(request, 'base/search-result.html')
 
-def post(request, num):
-    return render(request, "base/single-post.html")
-
+def post(request, pk):
+    return render(request, "base/single-post.html", {pk: pk})
 
 def contact(request):
     return render(request, 'base/contact.html')
